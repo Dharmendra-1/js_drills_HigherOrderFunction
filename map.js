@@ -1,21 +1,16 @@
 const map = (elements, cb) =>{
     
-  let evenNumberOfArray = []
+  let sqrtNumberOfArray = []
 
   for(let index=0; index<elements.length; index++){
     
-       let state =  cb(elements[index]);
+       let sqrtNumber =  cb(elements[index]);
 
-       if(state == true){
-
-           evenNumberOfArray.push(elements[index]);
-       
-        }
-
+       sqrtNumberOfArray.push(sqrtNumber );
   }
 
   
-  return evenNumberOfArray;
+  return sqrtNumberOfArray;
 }
 
 

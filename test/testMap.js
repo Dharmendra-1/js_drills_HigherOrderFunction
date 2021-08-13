@@ -5,14 +5,8 @@ const mapFunction = require('../map');
 
 const result = mapFunction(items, (element)=>{
      
-           if(element % 2 !== 0){
-               
-            return false;
-           
-        }
-
- return true;
-});
+         return element*element 
+  });
 
 
 console.log(result);
