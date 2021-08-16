@@ -1,29 +1,19 @@
 
-const reduce = (elements, cb) => {
+const reduce = (elements, cb, startingValue) => {
 
-const countOccurrence = {}
+    if(startingValue == undefined){
+        startingValue = elements[0]
+        elements = elements.slice(1);
+        }
 
 
    for(let index = 0; index < elements.length; index++){
         
-    let state =  cb(elements[index]);   
+     startingValue = cb(elements[index], startingValue);   
       
-       if(state == true){
-
-        if(countOccurrence[elements[index]]){
-          
-            countOccurrence[elements[index]] += 1;       
-       
-        }else{
-           
-            countOccurrence[elements[index]] = 1;
-        }    
-
-       }
-
     }      
 
- return countOccurrence;   
+ return startingValue;   
 }
 
 
